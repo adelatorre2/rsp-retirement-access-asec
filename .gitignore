@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS files
+.DS_Store
+
+# Large data files
+data/raw/
+# I am happy to provide the data files upon request, but I do not want to include them in the repository due to their size and potential privacy concerns. Please contact me if you would like access to the data files used in this project.
+*.csv.gz 
+*.dta
+*.dat
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp 
