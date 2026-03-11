@@ -17,13 +17,9 @@
 
 \section{Introduction}
 
-Retirement security in the United States depends in large part on whether workers have access to an employer-sponsored retirement plan and whether they ultimately participate in one. For many households, workplace retirement plans are the main institutional channel through which long-term savings are built. Yet access to these plans is uneven, and participation depends not only on whether a plan is offered but also on whether workers are enrolled in it. For that reason, distinguishing between \emph{access} and \emph{participation} is essential to understanding how retirement preparedness is distributed across the labor market.
+This exercise constructs annual measures of retirement plan \emph{access} and \emph{participation} among private-sector wage-and-salary workers ages 20--64 from 2010 through 2024 using the Current Population Survey Annual Social and Economic Supplement (CPS ASEC). Access refers to whether a worker’s employer offers a retirement plan, while participation refers to whether the worker is included in such a plan.
 
-This exercise develops annual measures of retirement plan access and participation among private-sector wage-and-salary workers ages 20--64 from 2010 through 2024 using the Current Population Survey Annual Social and Economic Supplement (CPS ASEC). I use harmonized IPUMS-CPS variables to construct a consistent descriptive series for the share of workers whose employer offers a pension or retirement plan and the share of workers who are included in such a plan. The resulting time series provides a compact view of how workplace retirement coverage evolved over a period that includes the recovery from the Great Recession, the redesign of the CPS ASEC questionnaire in the mid-2010s, and the labor-market disruptions associated with the COVID-19 pandemic.\footnote{IPUMS CPS; U.S. Census Bureau, Annual Social and Economic Supplement (ASEC) of the Current Population Survey (CPS).}
-
-The main descriptive finding is straightforward: both retirement plan access and participation declined over the period, with especially noticeable movement after 2014. Among private-sector wage-and-salary workers in the analytic sample, access fell from just above one-half of workers in 2010 to roughly two-fifths by the end of the period, while participation also moved downward. At the same time, participation conditional on having access remained substantially higher than the overall participation rate, suggesting that a large part of the coverage gap reflects whether workers are employed in jobs that offer plans in the first place.
-
-Because this is a descriptive exercise, the goal is not to identify the causal effect of any one policy or economic shock. Instead, the aim is to produce a transparent and replicable measure of retirement plan coverage using CPS ASEC microdata, document the sample construction and coding decisions clearly, and note important issues of interpretation---especially those related to survey redesign and question comparability. In that sense, the exercise mirrors the broader challenge in retirement policy analysis: before asking why coverage changes, one must first measure carefully who has access to retirement plans, who participates, and how those patterns shift over time.
+Using harmonized IPUMS-CPS microdata, I construct a consistent analytic sample of private-sector workers and estimate weighted annual rates of retirement plan access and participation. The goal of the exercise is descriptive rather than causal: to produce transparent and replicable measures of retirement plan coverage over time while clearly documenting the sample construction, survey questions used to define the measures, and important issues of interpretation---particularly the CPS ASEC questionnaire redesign introduced in the mid-2010s.
 
 \section{Data and Sample Construction}
 
@@ -39,13 +35,37 @@ All reported estimates are weighted using the CPS ASEC person weight \texttt{ASE
 
 Finally, one design feature of the CPS ASEC is relevant for interpreting the resulting time series. Beginning with the 2014 survey, the Census Bureau introduced a redesigned income questionnaire for a portion of the sample in order to improve the reporting of income sources, including retirement-related income. Because retirement-plan questions are conceptually related to these broader retirement-income measures, changes around the mid-2010s should be interpreted cautiously. Any sharp movements in the series between the pre- and post-redesign periods may reflect both genuine changes in retirement-plan coverage and improvements in measurement resulting from the updated questionnaire structure.
 
+
 \section{Measuring Retirement Plan Access and Participation}
+
+Retirement plan access and participation are measured using the CPS ASEC retirement coverage questions harmonized in the IPUMS-CPS dataset. Access captures whether a worker’s employer offers a pension or retirement plan, while participation captures whether the worker is included in such a plan.
+
+In the CPS ASEC, respondents who are employed are asked whether their employer offers a pension or retirement plan for any of its employees. Workers who report that their employer offers a plan are classified as having retirement plan \emph{access}. Respondents are then asked whether they are included in the employer’s plan. Workers who report that they are included are classified as \emph{participants}.
+
+Formally, the access rate is defined as the share of workers in the analytic sample who report that their employer offers a retirement plan. The participation rate is defined as the share of workers who report that they are included in such a plan. Both measures are computed annually using the CPS ASEC person weights so that estimates represent the population of private-sector wage-and-salary workers in the United States.
+
 
 \section{Estimation Approach}
 
+Annual estimates of retirement plan access and participation are computed using weighted descriptive statistics. For each survey year, the access rate is calculated as the weighted share of workers in the analytic sample who report that their employer offers a retirement plan. The participation rate is calculated as the weighted share of workers who report that they are included in a retirement plan.
+
+All estimates use the CPS ASEC person weight \texttt{ASECWT}. This weight adjusts for the CPS sampling design and ensures that the resulting estimates are representative of the national population of private-sector wage-and-salary workers ages 20--64. Applying the person weight is standard practice when producing descriptive statistics from CPS ASEC microdata.
+
+Observations with missing or ambiguous responses to the retirement-plan questions are excluded from the numerator and denominator when constructing the measures. This approach ensures that the resulting estimates reflect only respondents with clearly interpretable answers to the relevant survey questions.
+
+
 \section{CPS ASEC Redesign in 2015}
 
+The interpretation of the resulting time series requires attention to changes in the CPS ASEC questionnaire. Beginning with the 2014 survey year, the Census Bureau introduced a redesigned income questionnaire for part of the sample, and beginning in 2015 the redesigned questionnaire was implemented for the full ASEC sample.
+
+The redesign was intended to improve the reporting of income sources and retirement-related information. Because the measurement of retirement-plan coverage is conceptually linked to these broader income questions, the redesign may affect the comparability of responses before and after the change.
+
+As a result, shifts in the estimated access and participation rates around the mid-2010s should be interpreted cautiously. Some portion of the observed change may reflect improvements in measurement rather than genuine changes in retirement-plan coverage among workers.
+
+
 \section{Results}
+
+The resulting estimates show that both retirement plan access and participation declined over the period from 2010 through 2024 among private-sector wage-and-salary workers ages 20--64. Access rates fell from slightly above one-half of workers at the beginning of the period to roughly two-fifths by the end of the sample, while participation rates followed a similar downward pattern. The gap between access and participation remains substantial throughout the period, indicating that a meaningful share of workers who have access to a retirement plan are not enrolled. The figure below summarizes the annual trends in access and participation rates.
 
 \begin{figure}[h]
 \centering

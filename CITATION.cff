@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the code and data workflow."
+title: "CPS ASEC Retirement Plan Access and Participation (2010–2024)"
+authors:
+  - family-names: "De La Torre"
+    given-names: "Alejandro"
+year: 2026
+repository-code: "https://github.com/USERNAME/REPO"

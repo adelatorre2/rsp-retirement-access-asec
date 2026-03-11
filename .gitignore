@@ -1,23 +1,54 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+pip-wheel-metadata/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+.python-version
 
 # Jupyter
 .ipynb_checkpoints/
+*.ipynb~
 
 # LaTeX build files
 *.aux
+*.bbl
+*.blg
+*.bcf
+*.fdb_latexmk
+*.fls
 *.log
 *.out
+*.run.xml
 *.toc
 *.synctex.gz
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
 
 # OS files
 .DS_Store
+Thumbs.db
 
-# VS Code
+# Editors
 .vscode/
+.idea/
 
 # Temporary files
-*.tmp 
+*.tmp
+*.swp
+*.swo
