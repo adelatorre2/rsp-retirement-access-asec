@@ -17,23 +17,43 @@
 
 \section{Introduction}
 
-This exercise constructs annual measures of retirement plan \emph{access} and \emph{participation} among private-sector wage-and-salary workers ages 20--64 from 2010 through 2024 using the Current Population Survey Annual Social and Economic Supplement (CPS ASEC). Access refers to whether a worker’s employer offers a retirement plan, while participation refers to whether the worker is included in such a plan.
-
-Using harmonized IPUMS-CPS microdata, I construct a consistent analytic sample of private-sector workers and estimate weighted annual rates of retirement plan access and participation. The goal of the exercise is descriptive rather than causal: to produce transparent and replicable measures of retirement plan coverage over time while clearly documenting the sample construction, survey questions used to define the measures, and important issues of interpretation---particularly the CPS ASEC questionnaire redesign introduced in the mid-2010s.
+This exercise constructs annual measures of retirement plan \emph{access} and \emph{participation} among private-sector wage-and-salary workers ages 20--64 using the Current Population Survey Annual Social and Economic Supplement (CPS ASEC) from 2010 through 2024. Access refers to whether an employer offers a retirement plan, while participation refers to whether the worker is included in that plan. Using IPUMS-CPS microdata, I construct weighted annual estimates and document the sample construction and measurement choices used to produce a transparent and replicable time series of retirement plan coverage.
 
 \section{Data and Sample Construction}
 
-The analysis uses pooled person-level microdata from the IPUMS harmonized version of the Current Population Survey Annual Social and Economic Supplement (CPS ASEC) for survey years 2010 through 2024. The assignment asks for annual measures of retirement plan access and participation among private-sector workers ages 20--64, so the starting point is the full pooled ASEC extract and the analytic sample is narrowed to the subset of respondents relevant to that population. The extract includes the key labor-force, class-of-worker, and retirement-plan variables needed for the exercise, along with the ASEC person weight used to produce nationally representative estimates.
+The analysis uses person-level microdata from the Current Population Survey Annual Social and Economic Supplement (CPS ASEC) obtained through the IPUMS-CPS harmonized extract system. IPUMS provides consistently coded variables and documentation that allow comparable analysis across CPS samples over time (\cite{IPUMSCPS}). The CPS ASEC is an annual nationally representative survey conducted by the U.S. Census Bureau and the Bureau of Labor Statistics that collects detailed information on employment, income sources, and retirement-related characteristics of individuals in the United States (\cite{bureauAnnualSocialEconomic}).
 
-I construct the analytic sample in four steps. First, I retain only survey years 2010--2024. Second, I restrict the sample to working-age adults ages 20--64. Third, I keep only respondents who are employed at the time of the survey using the CPS employment-status variable \texttt{EMPSTAT}. Workers coded as \texttt{EMPSTAT = 10} ("at work") or \texttt{EMPSTAT = 12} ("has job, not at work last week") are included. The goal of the exercise is to measure access to employer-sponsored retirement plans among current workers, so unemployed respondents, retirees, and individuals out of the labor force are excluded from the denominator.
+The extract used for this exercise includes survey years 2010 through 2024 and contains the key demographic, labor-market, and retirement-plan variables required to construct measures of retirement plan access and participation. Because the CPS ASEC is a repeated cross-section rather than a longitudinal panel for this application, each survey year is treated as an independent nationally representative cross section. The pooled dataset is used only to construct consistent annual estimates.
 
-Fourth, among employed respondents I retain only private-sector wage-and-salary workers using the CPS class-of-worker variable \texttt{CLASSWKR}. In the IPUMS coding scheme, private wage-and-salary workers correspond to codes 21, 22, and 23 (private, for-profit, and nonprofit). Government employees, members of the armed forces, unpaid family workers, and the self-employed are excluded. This restriction is important conceptually: the measures used in this exercise are framed around whether an employer offers a retirement plan and whether a worker is included in that plan, so wage-and-salary employment provides the most consistent denominator for an employer-sponsored coverage measure.
+The analytic sample is constructed in four steps. First, the sample is restricted to survey years 2010--2024. Second, the sample is limited to working-age adults ages 20--64. Third, I retain only individuals who are employed at the time of the survey using the CPS employment-status variable \texttt{EMPSTAT}. Workers coded as \texttt{EMPSTAT = 10} ("at work") or \texttt{EMPSTAT = 12} ("has job, not at work last week") are classified as employed and included in the analytic sample.
 
-After applying these restrictions, the analytic sample consists of private-sector wage-and-salary workers ages 20--64 observed in the CPS ASEC from 2010 through 2024. The resulting pooled dataset contains over eight hundred thousand person-year observations, with annual unweighted sample sizes generally ranging from roughly 45,000 to 63,000 respondents depending on the year. Because the CPS ASEC is a repeated cross-section rather than a panel used for longitudinal analysis, each year is treated as an independent nationally representative cross section and the pooled file is used only to construct comparable annual estimates.
+Fourth, among employed individuals I restrict the sample to private-sector wage-and-salary workers using the class-of-worker variable \texttt{CLASSWKR}. In the IPUMS coding scheme, private wage-and-salary workers correspond to codes 21 (private, for-profit wage and salary), 22 (private, nonprofit wage and salary), and 23 (private wage and salary, other). Government workers, members of the armed forces, unpaid family workers, and self-employed workers are excluded from the analytic sample. This restriction aligns the denominator with the conceptual object of interest: employer-sponsored retirement plans offered by private-sector employers.
 
-All reported estimates are weighted using the CPS ASEC person weight \texttt{ASECWT}. Applying this weight ensures that the annual estimates represent the population of private-sector wage-and-salary workers in the United States rather than the raw survey sample alone. The use of person weights is standard practice when constructing descriptive statistics from CPS ASEC microdata.
+After applying these restrictions, the analytic sample consists of private-sector wage-and-salary workers ages 20--64 observed in the CPS ASEC from 2010 through 2024. The resulting pooled dataset contains more than eight hundred thousand person-year observations, with annual sample sizes typically ranging from roughly 45,000 to 63,000 individuals depending on the survey year.
 
-Finally, one design feature of the CPS ASEC is relevant for interpreting the resulting time series. Beginning with the 2014 survey, the Census Bureau introduced a redesigned income questionnaire for a portion of the sample in order to improve the reporting of income sources, including retirement-related income. Because retirement-plan questions are conceptually related to these broader retirement-income measures, changes around the mid-2010s should be interpreted cautiously. Any sharp movements in the series between the pre- and post-redesign periods may reflect both genuine changes in retirement-plan coverage and improvements in measurement resulting from the updated questionnaire structure.
+All estimates are weighted using the CPS ASEC person weight \texttt{ASECWT}. Applying this weight ensures that the resulting statistics represent the population of private-sector wage-and-salary workers in the United States rather than the raw survey sample. The use of person weights is standard practice when producing descriptive statistics from CPS ASEC microdata (\cite{bureauAnnualSocialEconomic}).
+
+Table~\ref{tab:variables} summarizes the key variables used in constructing the analytic sample and the retirement-plan measures.
+
+\begin{table}[h]
+\centering
+\caption{Key Variables Used in Sample Construction and Measurement}
+\label{tab:variables}
+\begin{tabular}{ll}
+\toprule
+Variable & Description \\
+\midrule
+\texttt{YEAR} & Survey year of CPS ASEC observation \\
+\texttt{AGE} & Respondent age used to restrict sample to ages 20--64 \\
+\texttt{EMPSTAT} & Employment status indicator used to identify employed workers \\
+\texttt{CLASSWKR} & Class-of-worker variable used to identify private wage-and-salary workers \\
+\texttt{PENSION} & Indicator of employer pension or retirement plan coverage \\
+\texttt{ASECWT} & CPS ASEC person weight used to produce nationally representative estimates \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For transparency and reproducibility, the full variable definitions and coding used in the analysis are documented in the replication code and accompanying data documentation distributed with the repository.
 
 
 \section{Measuring Retirement Plan Access and Participation}
