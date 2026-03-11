@@ -1,0 +1,917 @@
+Description: IPUMS-CPS ASEC 2010–2024 pooled extract for analysis of employer-sponsored retirement plan access and participation in the U.S. workforce. Dataset includes demographic controls, labor market characteristics, earnings measures, firm size, union status, and pension indicators (PENSION, UH_PENPLAN_A1, UH_PENSINCL_A1). Monetary variables converted to constant 2010 dollars using CPI-U adjustments. Person-level weights (ASECWT) included for nationally representative estimates.
+Samples selected:
+      IPUMS-CPS, ASEC 2010
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2011
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2012
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2013
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2014
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2015
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2016
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2017
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2018
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2019
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2020
+            Note: 
+            Density of the full data file:  0.07%
+            Density of your extract: 0.1%
+
+      IPUMS-CPS, ASEC 2021
+            Note: 
+            Density of the full data file:  0.01%
+            Density of your extract: 0.0%
+
+      IPUMS-CPS, ASEC 2022
+            Note: 
+            Density of the full data file:  0.01%
+            Density of your extract: 0.0%
+
+      IPUMS-CPS, ASEC 2023
+            Note: 
+            Density of the full data file:  0.01%
+            Density of your extract: 0.0%
+
+      IPUMS-CPS, ASEC 2024
+            Note: 
+            Density of the full data file:  0.01%
+            Density of your extract: 0.0%
+
+File Type:                    rectangular
+Case Selection:               No
+  Variable                         Columns        Len   03/2010 03/2011 03/2012 03/2013 03/2014 03/2015 03/2016 03/2017 03/2018 03/2019 03/2020 03/2021 03/2022 03/2023 03/2024 
+  YEAR                         H   1-4            4     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  SERIAL                       H   5-9            5     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  MONTH                        H  10-11           2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  CPSID                        H  12-25          14     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  ASECFLAG                     H  26              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  HFLAG                        H  27              1     .       .       .       .       X       .       .       .       .       .       .       .       .       .       .       
+  ASECWTH                      H  28-38          11     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  REGION                       H  39-40           2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  STATEFIP                     H  41-42           2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  COUNTY                       H  43-47           5     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  METFIPS                      H  48-52           5     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  METRO                        H  53              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  CBSASZ                       H  54-55           2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  HHINCOME                     H  56-63           8     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  PERNUM                       P  64-65           2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  CPSIDP                       P  66-79          14     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  CPSIDV                       P  80-94          15     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  ASECWT                       P  95-105         11     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  AGE                          P 106-107          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  SEX                          P 108              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  RACE                         P 109-111          3     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  MARST                        P 112              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  ASIAN                        P 113-114          2     .       .       .       X       X       X       X       X       X       X       X       X       X       X       X       
+  VETSTAT                      P 115              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  FAMSIZE                      P 116-117          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  NCHILD                       P 118              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  NCHLT5                       P 119              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  BPL                          P 120-124          5     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  CITIZEN                      P 125              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  NATIVITY                     P 126              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  HISPAN                       P 127-129          3     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  EMPSTAT                      P 130-131          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  LABFORCE                     P 132              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  OCC                          P 133-136          4     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  IND                          P 137-140          4     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  CLASSWKR                     P 141-142          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  UHRSWORKT                    P 143-145          3     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  AHRSWORKT                    P 146-148          3     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  WKSTAT                       P 149-150          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  EDUC                         P 151-153          3     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  CLASSWLY                     P 154-155          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  WKSWORK1                     P 156-157          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  PENSION                      P 158              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  FIRMSIZE                     P 159              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  FTOTVAL                      P 160-169         10     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCTOT                       P 170-178          9     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCTOT_CPIU_2010             P 179-189         11     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCWAGE                      P 190-197          8     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCWAGE_CPIU_2010            P 198-207         10     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCBUS                       P 208-215          8     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCFARM                      P 216-223          8     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCWELFR                     P 224-229          6     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  INCDISAB                     P 230-236          7     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  POVERTY                      P 237-238          2     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  MIGRATE5                     P 239-240          2     .       .       .       .       .       X       .       .       .       .       X       .       .       .       .       
+  DISABWRK                     P 241              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  UNION                        P 242              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  EARNWEEK                     P 243-250          8     X       X       X       X       X       X       X       X       X       X       X       X       X       X       .       
+  EARNWEEK_CPIU_2010           P 251-260         10     X       X       X       X       X       X       X       X       X       X       X       X       X       X       .       
+  UH_PENPLAN_A1                P 261              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+  UH_PENSINCL_A1               P 262              1     X       X       X       X       X       X       X       X       X       X       X       X       X       X       X       
+
+Variable Availability Key:
+All Years X - available in this sample
+All Years . - not available in this sample
+
+RECTYPE   Record type
+H         Household
+P         Person
+
+MONTH               Month
+01                  January
+02                  February
+03                  March
+04                  April
+05                  May
+06                  June
+07                  July
+08                  August
+09                  September
+10                  October
+11                  November
+12                  December
+
+ASECFLAG            Flag for ASEC
+1                   ASEC
+2                   March Basic
+
+HFLAG               Flag for the 3/8 file 2014
+0                   5/8 file
+1                   3/8 file
+
+REGION              Region and division
+                    NORTHEAST REGION
+11                  New England Division
+12                  Middle Atlantic Division
+                    MIDWEST REGION
+21                  East North Central Division
+22                  West North Central Division
+                    SOUTH REGION
+31                  South Atlantic Division
+32                  East South Central Division
+33                  West South Central Division
+                    WEST REGION
+41                  Mountain Division
+42                  Pacific Division
+                    STATE UNKNOWN
+97                  State not identified
+
+STATEFIP            State (FIPS code)
+01                  Alabama
+02                  Alaska
+04                  Arizona
+05                  Arkansas
+06                  California
+08                  Colorado
+09                  Connecticut
+10                  Delaware
+11                  District of Columbia
+12                  Florida
+13                  Georgia
+15                  Hawaii
+16                  Idaho
+17                  Illinois
+18                  Indiana
+19                  Iowa
+20                  Kansas
+21                  Kentucky
+22                  Louisiana
+23                  Maine
+24                  Maryland
+25                  Massachusetts
+26                  Michigan
+27                  Minnesota
+28                  Mississippi
+29                  Missouri
+30                  Montana
+31                  Nebraska
+32                  Nevada
+33                  New Hampshire
+34                  New Jersey
+35                  New Mexico
+36                  New York
+37                  North Carolina
+38                  North Dakota
+39                  Ohio
+40                  Oklahoma
+41                  Oregon
+42                  Pennsylvania
+44                  Rhode Island
+45                  South Carolina
+46                  South Dakota
+47                  Tennessee
+48                  Texas
+49                  Utah
+50                  Vermont
+51                  Virginia
+53                  Washington
+54                  West Virginia
+55                  Wisconsin
+56                  Wyoming
+61                  Maine-New Hampshire-Vermont
+65                  Montana-Idaho-Wyoming
+68                  Alaska-Hawaii
+69                  Nebraska-North Dakota-South Dakota
+70                  Maine-Massachusetts-New Hampshire-Rhode Island-Vermont
+71                  Michigan-Wisconsin
+72                  Minnesota-Iowa
+73                  Nebraska-North Dakota-South Dakota-Kansas
+74                  Delaware-Virginia
+75                  North Carolina-South Carolina
+76                  Alabama-Mississippi
+77                  Arkansas-Oklahoma
+78                  Arizona-New Mexico-Colorado
+79                  Idaho-Wyoming-Utah-Montana-Nevada
+80                  Alaska-Washington-Hawaii
+81                  New Hampshire-Maine-Vermont-Rhode Island
+83                  South Carolina-Georgia
+84                  Kentucky-Tennessee
+85                  Arkansas-Louisiana-Oklahoma
+87                  Iowa-N Dakota-S Dakota-Nebraska-Kansas-Minnesota-Missouri
+88                  Washington-Oregon-Alaska-Hawaii
+89                  Montana-Wyoming-Colorado-New Mexico-Utah-Nevada-Arizona
+90                  Delaware-Maryland-Virginia-West Virginia
+99                  State not identified
+
+METRO               Metropolitan and central/principal city status
+0                   Not identified
+1                   Not in metropolitan area
+                    In metropolitan area:
+2                   In central/principal city
+3                   Not in central/principal city
+4                   Central/principal city status not identified
+9                   Missing/unknown
+
+CBSASZ              Core-based (metro/micro) statistical area size
+00                  Not identified or nonmetropolitan
+01                  100,000 - 249,999
+02                  250,000 - 499,999
+03                  500,000 - 999,999
+04                  1,000,000 - 2,499,999
+05                  2,500,000 - 4,999,999
+06                  5,000,000 or more
+
+AGE                 Age
+00                  Under 1 year
+01                  1
+02                  2
+03                  3
+04                  4
+05                  5
+06                  6
+07                  7
+08                  8
+09                  9
+10                  10
+11                  11
+12                  12
+13                  13
+14                  14
+15                  15
+16                  16
+17                  17
+18                  18
+19                  19
+20                  20
+21                  21
+22                  22
+23                  23
+24                  24
+25                  25
+26                  26
+27                  27
+28                  28
+29                  29
+30                  30
+31                  31
+32                  32
+33                  33
+34                  34
+35                  35
+36                  36
+37                  37
+38                  38
+39                  39
+40                  40
+41                  41
+42                  42
+43                  43
+44                  44
+45                  45
+46                  46
+47                  47
+48                  48
+49                  49
+50                  50
+51                  51
+52                  52
+53                  53
+54                  54
+55                  55
+56                  56
+57                  57
+58                  58
+59                  59
+60                  60
+61                  61
+62                  62
+63                  63
+64                  64
+65                  65
+66                  66
+67                  67
+68                  68
+69                  69
+70                  70
+71                  71
+72                  72
+73                  73
+74                  74
+75                  75
+76                  76
+77                  77
+78                  78
+79                  79
+80                  80
+81                  81
+82                  82
+83                  83
+84                  84
+85                  85
+86                  86
+87                  87
+88                  88
+89                  89
+90                  90 (90+, 1988-2002)
+91                  91
+92                  92
+93                  93
+94                  94
+95                  95
+96                  96
+97                  97
+98                  98
+99                  99+
+
+SEX                 Sex
+1                   Male
+2                   Female
+9                   NIU
+
+RACE                Race
+100                 White
+200                 Black
+300                 American Indian/Aleut/Eskimo
+650                 Asian or Pacific Islander
+651                 Asian only
+652                 Hawaiian/Pacific Islander only
+700                 Other (single) race, n.e.c.
+                    Two or more races
+801                 White-Black
+802                 White-American Indian
+803                 White-Asian
+804                 White-Hawaiian/Pacific Islander
+805                 Black-American Indian
+806                 Black-Asian
+807                 Black-Hawaiian/Pacific Islander
+808                 American Indian-Asian
+809                 Asian-Hawaiian/Pacific Islander
+810                 White-Black-American Indian
+811                 White-Black-Asian
+812                 White-American Indian-Asian
+813                 White-Asian-Hawaiian/Pacific Islander
+814                 White-Black-American Indian-Asian
+815                 American Indian-Hawaiian/Pacific Islander
+816                 White-Black--Hawaiian/Pacific Islander
+817                 White-American Indian-Hawaiian/Pacific Islander
+818                 Black-American Indian-Asian
+819                 White-American Indian-Asian-Hawaiian/Pacific Islander
+820                 Two or three races, unspecified
+830                 Four or five races, unspecified
+999                 Blank
+
+MARST               Marital status
+1                   Married, spouse present
+2                   Married, spouse absent
+3                   Separated
+4                   Divorced
+5                   Widowed
+6                   Never married/single
+7                   Widowed or Divorced
+9                   NIU
+
+ASIAN               Asian subgroup
+10                  Asian Indian
+20                  Chinese
+30                  Filipino
+40                  Japanese
+50                  Korean
+60                  Vietnamese
+70                  Other Asian
+99                  NIU
+
+VETSTAT             Veteran status
+0                   NIU
+1                   No service
+2                   Yes
+9                   Unknown
+
+FAMSIZE             Number of own family members in hh
+00                  Missing
+01                  1 family member present
+02                  2 family members present
+03                  3 family members present
+04                  4 family members present
+05                  5 family members present
+06                  6 family members present
+07                  7 family members present
+08                  8 family members present
+09                  9 family members present
+10                  10 family members present
+11                  11 family members present
+12                  12 family members present
+13                  13 family members present
+14                  14 family members present
+15                  15 family members present
+16                  16 family members present
+17                  17 family members present
+18                  18 family members present
+19                  19 family members present
+20                  20 family members present
+21                  21 family members present
+22                  22 family members present
+23                  23 family members present
+24                  24 family members present
+25                  25 family members present
+26                  26 family members present
+27                  27 family members present
+28                  28 family members present
+29                  29 family members present
+
+NCHILD              Number of own children in household
+0                   0 children present
+1                   1 child present
+2                   2
+3                   3
+4                   4
+5                   5
+6                   6
+7                   7
+8                   8
+9                   9+
+
+NCHLT5              Number of own children under age 5 in hh
+0                   No children under age 5
+1                   1 child under age 5
+2                   2
+3                   3
+4                   4
+5                   5
+6                   6
+7                   7
+8                   8
+9                   9+
+
+BPL                 Birthplace
+                    UNITED STATES
+09900               United States, n.s.
+                    US OUTLYING AREAS/TERRITORIES
+10000               American Samoa
+10500               Guam
+10750               Northern Mariana Islands
+11000               Puerto Rico
+11500               U.S. Virgin Islands
+12090               U.S. outlying areas, n.s.
+                    OTHER NORTH AMERICA
+15000               Canada
+16010               Bermuda
+19900               North America, n.s.
+                    CENTRAL AMERICA
+20000               Mexico
+21010               Belize/British Honduras
+21020               Costa Rica
+21030               El Salvador
+21040               Guatemala
+21050               Honduras
+21060               Nicaragua
+21070               Panama
+21090               Central America, n.s.
+                    CARIBBEAN
+25000               Cuba
+26010               Dominican Republic
+26020               Haiti
+26030               Jamaica
+26043               Bahamas
+26044               Barbados
+26054               Dominica
+26055               Grenada
+26060               Trinidad and Tobago
+26065               Antigua and Barbuda
+26070               St. Kitts--Nevis
+26075               St. Lucia
+26080               St. Vincent and the Grenadi
+26091               Caribbean, n.s.
+                    SOUTH AMERICA
+30005               Argentina
+30010               Bolivia
+30015               Brazil
+30020               Chile
+30025               Colombia
+30030               Ecuador
+30040               Guyana/British Guiana
+30050               Peru
+30060               Uruguay
+30065               Venezuela
+30070               Paraguay
+30090               South America, n.s.
+31000               Americas, n.s.
+                    EUROPE
+                    Northern Europe
+40000               Denmark
+40100               Finland
+40200               Iceland
+40400               Norway
+40500               Sweden
+                    United Kingdom and Ireland:
+41000               England
+41100               Scotland
+41200               Wales
+41300               United Kingdom, n.s.
+41400               Ireland
+41410               Northern Ireland
+                    Western Europe
+42000               Belgium
+42100               France
+42500               Netherlands
+42600               Switzerland
+                    Southern Europe
+43300               Greece
+43400               Italy
+43600               Portugal
+43610               Azores
+43800               Spain
+                    Central/Eastern Europe
+45000               Austria
+45200               Czechoslavakia
+45212               Slovakia
+45213               Czech Republic
+45300               Germany
+45400               Hungary
+45500               Poland
+45600               Romania
+45650               Bulgaria
+45675               Albania
+45700               Yugoslavia
+45720               Bosnia and Herzegovina
+45730               Croatia
+45740               Macedonia
+45750               Serbia
+45760               Kosovo
+45770               Montenego
+                    Russian Empire:
+                    Baltic States:
+46100               Estonia
+46200               Latvia
+46300               Lithuania
+46500               Other USSR/Russia
+46530               Ukraine
+46535               Belarus
+46540               Moldova
+46590               USSR, n.s.
+49900               Europe, n.s.
+                    ASIA
+                    East Asia:
+50000               China
+50010               Hong Kong
+50040               Taiwan
+50100               Japan
+50200               Korea
+50220               South Korea
+50300               Mongolia
+                    Southeast Asia
+51100               Cambodia
+51200               Indonesia
+51300               Laos
+51400               Malaysia
+51500               Philippines
+51600               Singapore
+51700               Thailand
+51800               Vietnam
+                    India/Southwest Asia:
+52000               Afghanistan
+52100               India
+52110               Bangladesh
+52120               Bhutan
+52130               Burma
+52140               Pakistan
+52150               Sri Lanka
+52200               Nepal
+                    Eurasia:
+55100               Armenia
+55200               Azerbaijan
+55300               Georgia
+                    Central Asia:
+55400               Uzbekistan
+55500               Kazakhstan
+                    Middle East/Asia Minor:
+53000               Iran
+53200               Iraq
+53400               Israel
+53420               Palestine
+53500               Jordan
+53700               Lebanon
+54000               Saudi Arabia
+54100               Syria
+54200               Turkey
+54300               Cyprus
+54350               Kuwait
+54400               Yemen
+54500               United Arab Emirates
+54700               Middle East, n.s.
+59900               Asia, n.e.c./n.s.
+                    AFRICA
+60010               Northern Africa
+60012               Egypt/United Arab Rep.
+60014               Morocco
+60016               Algeria
+60018               Sudan
+60019               Libya
+                    West Africa:
+60023               Ghana
+60031               Nigeria
+60032               Cameroon
+60033               Cape Verde
+60034               Liberia
+60035               Senegal
+60036               Sierra Leone
+60037               Guinea
+60038               Ivory Coast
+60039               Togo
+                    East Africa:
+60040               Eritrea
+60044               Ethiopia
+60045               Kenya
+60050               Somalia
+60060               Tanzania
+60065               Uganda
+60070               Zimbabwe
+60094               South Africa (Union of)
+                    Central Africa:
+60095               Zaire
+60096               Congo
+60097               Zambia
+60099               Africa, n.s./n.e.c.
+                    OCEANIA
+                    Australia and New Zealand
+70010               Australia
+70020               New Zealand
+71000               Pacific Islands
+71021               Fiji
+71022               Tonga
+71023               Samoa
+71024               Marshall Islands
+72000               Micronesia
+96000               Other, n.e.c. and unknown
+99999               NIU
+
+CITIZEN             Citizenship status
+1                   Born in U.S
+2                   Born in U.S. outlying
+3                   Born abroad of American parents
+4                   Naturalized citizen
+5                   Not a citizen
+9                   NIU
+
+NATIVITY            Foreign birthplace or parentage
+0                   Unknown
+                    Native-Born
+1                   Both parents native-born
+2                   Father foreign, mother native
+3                   Mother foreign, father native
+4                   Both parents foreign
+5                   Foreign born
+
+HISPAN              Hispanic origin
+000                 Not Hispanic
+100                 Mexican
+102                 Mexican American
+103                 Mexicano/Mexicana
+104                 Chicano/Chicana
+108                 Mexican (Mexicano)
+109                 Mexicano/Chicano
+200                 Puerto Rican
+300                 Cuban
+400                 Dominican
+500                 Salvadoran
+                    Other Spanish:
+600                 Other Hispanic
+610                 Central/South American
+611                 Central American, (excluding Salvadoran)
+612                 South American
+901                 Do not know
+902                 N/A (and no response 1985-87)
+
+EMPSTAT             Employment status
+00                  NIU
+01                  Armed Forces
+                    In Labor Force
+                    Employed
+10                  At work
+12                  Has job, not at work last week
+20                  Unemployed
+21                  Unemployed, experienced worker
+22                  Unemployed, new worker
+30                  Not in labor force
+31                  NILF, housework
+32                  NILF, unable to work
+33                  NILF, school
+34                  NILF, other
+35                  NILF, unpaid, lt 15 hours
+36                  NILF, retired
+
+LABFORCE            Labor force status
+0                   NIU
+1                   No, not in the labor force
+2                   Yes, in the labor force
+
+CLASSWKR            Class of worker 
+00                  NIU
+10                  Self-employed
+13                  Self-employed, not incorporated
+14                  Self-employed, incorporated
+20                  Works for wages or salary
+21                  Wage/salary, private
+22                  Private, for profit
+23                  Private, nonprofit
+24                  Wage/salary, government
+25                  Federal government employee
+26                  Armed forces
+27                  State government employee
+28                  Local government employee
+29                  Unpaid family worker
+99                  Missing/Unknown
+
+UHRSWORKT           Hours usually worked per week at all jobs
+997                 Hours vary
+999                 NIU
+
+WKSTAT              Full or part time status
+10                  Full-time schedules
+11                  Full-time hours (35+), usually full-time
+12                  Part-time for non-economic reasons, usually full-time
+13                  Not at work, usually full-time
+14                  Full-time hours, usually part-time for economic reasons
+15                  Full-time hours, usually part-time for non-economic reasons
+20                  Part-time for economic reasons
+21                  Part-time for economic reasons, usually full-time
+22                  Part-time hours, usually part-time for economic reasons
+40                  Part-time for non-economic reasons, usually part-time
+41                  Part-time hours, usually part-time for non-economic reasons
+42                  Not at work, usually part-time
+50                  Unemployed, seeking full-time work
+60                  Unemployed, seeking part-time work
+99                  NIU, blank, or not in labor force
+
+EDUC                Educational attainment recode
+000                 NIU or no schooling
+001                 NIU or blank
+002                 None or preschool
+010                 Grades 1, 2, 3, or 4
+011                 Grade 1
+012                 Grade 2
+013                 Grade 3
+014                 Grade 4
+020                 Grades 5 or 6
+021                 Grade 5
+022                 Grade 6
+030                 Grades 7 or 8
+031                 Grade 7
+032                 Grade 8
+040                 Grade 9
+050                 Grade 10
+060                 Grade 11
+070                 Grade 12
+071                 12th grade, no diploma
+072                 12th grade, diploma unclear
+073                 High school diploma or equivalent
+080                 1 year of college
+081                 Some college but no degree
+090                 2 years of college
+091                 Associate's degree, occupational/vocational program
+092                 Associate's degree, academic program
+100                 3 years of college
+110                 4 years of college
+111                 Bachelor's degree
+120                 5+ years of college
+121                 5 years of college
+122                 6+ years of college
+123                 Master's degree
+124                 Professional school degree
+125                 Doctorate degree
+999                 Missing/Unknown
+
+CLASSWLY            Class of worker last year
+00                  NIU
+10                  Self-employed
+13                  Self-employed, not incorporated
+14                  Self-employed, incorporated
+20                  Works for wages or salary
+22                  Wage/salary, private
+24                  Wage/salary, government
+25                  Federal government employee
+27                  State government employee
+28                  Local government employee
+29                  Unpaid family worker
+99                  Missing/Unknown
+
+PENSION             Pension plan at work
+0                   NIU
+1                   No pension plan at work
+2                   Pension plan at work, but not included
+3                   Included in pension plan at work
+
+FIRMSIZE            Number of employees
+0                   NIU
+1                   Under 10
+2                   10 to 24
+3                   Under 25
+4                   10 to 49
+5                   25 to 99
+6                   50 to 99
+7                   100 to 499
+8                   500 to 999
+9                   1000+
+
+POVERTY             Original poverty status (PUMS original)
+00                  NIU
+10                  Below poverty
+20                  Above poverty
+21                  100-124 percent of the low-income level
+22                  125-149 percent of the low-income level
+23                  150 percent and above the low-income level
+
+MIGRATE5            Migration status, 5 years
+00                  NIU
+10                  Same house
+                    Different house:
+20                  Place not reported (within U.S.)
+30                  Moved within county
+40                  Moved within state, between counties
+41                  Different county, same state, same SMSA
+42                  Different county, same state, different SMSA
+50                  Moved between states
+51                  Moved between contiguous states
+52                  Moved between non-contiguous states
+60                  Abroad five years ago
+
+DISABWRK            Work disability
+0                   NIU
+1                   No disability that affects work
+2                   Disability limits or prevents work
+
+UNION               Union membership
+0                   NIU
+1                   No union coverage
+2                   Member of labor union
+3                   Covered by union but not a member
+
+UH_PENPLAN_A1       Existence of pension plan by employer, 1980-2025
+0                   NIU
+1                   Employer has pension plan
+2                   Employer did not have pension plan
+
+UH_PENSINCL_A1      Included in pension plan at work, 1980-2025
+0                   NIU
+1                   Yes
+2                   No

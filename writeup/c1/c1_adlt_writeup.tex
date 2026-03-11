@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{geometry}
+
+\geometry{margin=1in}
+
+\title{Retirement Plan Access and Participation Among Private-Sector Workers, 2010--2024}
+\author{Alejandro De La Torre}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Retirement security in the United States depends in large part on whether workers have access to an employer-sponsored retirement plan and whether they ultimately participate in one. For many households, workplace retirement plans are the main institutional channel through which long-term savings are built. Yet access to these plans is uneven, and participation depends not only on whether a plan is offered but also on whether workers are enrolled in it. For that reason, distinguishing between \emph{access} and \emph{participation} is essential to understanding how retirement preparedness is distributed across the labor market.
+
+This exercise develops annual measures of retirement plan access and participation among private-sector wage-and-salary workers ages 20--64 from 2010 through 2024 using the Current Population Survey Annual Social and Economic Supplement (CPS ASEC). I use harmonized IPUMS-CPS variables to construct a consistent descriptive series for the share of workers whose employer offers a pension or retirement plan and the share of workers who are included in such a plan. The resulting time series provides a compact view of how workplace retirement coverage evolved over a period that includes the recovery from the Great Recession, the redesign of the CPS ASEC questionnaire in the mid-2010s, and the labor-market disruptions associated with the COVID-19 pandemic.\footnote{IPUMS CPS; U.S. Census Bureau, Annual Social and Economic Supplement (ASEC) of the Current Population Survey (CPS).}
+
+The main descriptive finding is straightforward: both retirement plan access and participation declined over the period, with especially noticeable movement after 2014. Among private-sector wage-and-salary workers in the analytic sample, access fell from just above one-half of workers in 2010 to roughly two-fifths by the end of the period, while participation also moved downward. At the same time, participation conditional on having access remained substantially higher than the overall participation rate, suggesting that a large part of the coverage gap reflects whether workers are employed in jobs that offer plans in the first place.
+
+Because this is a descriptive exercise, the goal is not to identify the causal effect of any one policy or economic shock. Instead, the aim is to produce a transparent and replicable measure of retirement plan coverage using CPS ASEC microdata, document the sample construction and coding decisions clearly, and note important issues of interpretation---especially those related to survey redesign and question comparability. In that sense, the exercise mirrors the broader challenge in retirement policy analysis: before asking why coverage changes, one must first measure carefully who has access to retirement plans, who participates, and how those patterns shift over time.
+
+\section{Data and Sample Construction}
+
+The analysis uses pooled person-level microdata from the IPUMS harmonized version of the Current Population Survey Annual Social and Economic Supplement (CPS ASEC) for survey years 2010 through 2024. The assignment asks for annual measures of retirement plan access and participation among private-sector workers ages 20--64, so the starting point is the full pooled ASEC extract and the analytic sample is narrowed to the subset of respondents relevant to that population. The extract includes the key labor-force, class-of-worker, and retirement-plan variables needed for the exercise, along with the ASEC person weight used to produce nationally representative estimates.
+
+I construct the analytic sample in four steps. First, I retain only survey years 2010--2024. Second, I restrict the sample to working-age adults ages 20--64. Third, I keep only respondents who are employed at the time of the survey using the CPS employment-status variable \texttt{EMPSTAT}. Workers coded as \texttt{EMPSTAT = 10} ("at work") or \texttt{EMPSTAT = 12} ("has job, not at work last week") are included. The goal of the exercise is to measure access to employer-sponsored retirement plans among current workers, so unemployed respondents, retirees, and individuals out of the labor force are excluded from the denominator.
+
+Fourth, among employed respondents I retain only private-sector wage-and-salary workers using the CPS class-of-worker variable \texttt{CLASSWKR}. In the IPUMS coding scheme, private wage-and-salary workers correspond to code 21. Government employees, members of the armed forces, unpaid family workers, and the self-employed are excluded. This restriction is important conceptually: the measures used in this exercise are framed around whether an employer offers a retirement plan and whether a worker is included in that plan, so wage-and-salary employment provides the most consistent denominator for an employer-sponsored coverage measure.
+
+After applying these restrictions, the analytic sample consists of private-sector wage-and-salary workers ages 20--64 observed in the CPS ASEC from 2010 through 2024. The resulting pooled dataset contains over eight hundred thousand person-year observations, with annual unweighted sample sizes generally ranging from roughly 45,000 to 63,000 respondents depending on the year. Because the CPS ASEC is a repeated cross-section rather than a panel used for longitudinal analysis, each year is treated as an independent nationally representative cross section and the pooled file is used only to construct comparable annual estimates.
+
+All reported estimates are weighted using the CPS ASEC person weight \texttt{ASECWT}. Applying this weight ensures that the annual estimates represent the population of private-sector wage-and-salary workers in the United States rather than the raw survey sample alone. The use of person weights is standard practice when constructing descriptive statistics from CPS ASEC microdata.
+
+Finally, one design feature of the CPS ASEC is relevant for interpreting the resulting time series. Beginning with the 2014 survey, the Census Bureau introduced a redesigned income questionnaire for a portion of the sample in order to improve the reporting of income sources, including retirement-related income. Because retirement-plan questions are conceptually related to these broader retirement-income measures, changes around the mid-2010s should be interpreted cautiously. Any sharp movements in the series between the pre- and post-redesign periods may reflect both genuine changes in retirement-plan coverage and improvements in measurement resulting from the updated questionnaire structure.
+
+\section{Measuring Retirement Plan Access and Participation}
+
+\section{Estimation Approach}
+
+\section{CPS ASEC Redesign in 2015}
+
+\section{Results}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{/Users/alexdelatorre/Documents/Work/CAREER_RESOURCES/Resumes & Cover Letters/ACTIVE_RESUME/latex-resume/cover_letters/!SUBMITTED/Brookings RA, Retirement Security Project, Economic Studies/rsp_data_task/output/figures/retirement_access_participation_main_figure.png}
+\caption{Retirement Plan Access and Participation Among Private-Sector Workers Ages 20--64}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Retirement Plan Access Rates by Year}
+\end{table}
+
+\end{document}
