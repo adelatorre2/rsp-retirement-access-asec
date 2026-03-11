@@ -48,7 +48,7 @@ def find_raw_extract(
     """Resolve the raw IPUMS extract path, preferring an explicit path if provided."""
     if not raw_dir.exists():
         raise FileNotFoundError(
-            f\"Raw data directory not found: {raw_dir}. Expected data/raw/ under the repo root.\"
+            f"Raw data directory not found: {raw_dir}. Expected data/raw/ under the repo root."
         )
     if explicit_path:
         candidate = Path(explicit_path)
