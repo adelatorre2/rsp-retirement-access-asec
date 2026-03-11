@@ -1,8 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the code and data workflow."
 title: "CPS ASEC Retirement Plan Access and Participation (2010–2024)"
+type: software
 authors:
   - family-names: "De La Torre"
     given-names: "Alejandro"
-year: 2026
+date-released: 2026-03-11
+license: MIT
 repository-code: "https://github.com/adelatorre2/rsp-retirement-access-asec"
+url: "https://github.com/adelatorre2/rsp-retirement-access-asec"

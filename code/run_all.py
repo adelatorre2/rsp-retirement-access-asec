@@ -98,7 +98,13 @@ def load_raw_extract(path: Path) -> pd.DataFrame:
 
 
 def build_analytic_sample(df: pd.DataFrame) -> pd.DataFrame:
-    """Apply sample restrictions and construct access/participation measures."""
+    """Apply sample restrictions and construct access/participation measures.
+
+    Sample definition:
+    - ages 20–64
+    - employed (EMPSTAT 10 or 12)
+    - private-sector wage-and-salary workers (CLASSWKR 21, 22, 23)
+    """
     df = df.copy()
 
     df = df[(df["YEAR"] >= 2010) & (df["YEAR"] <= 2024)]
@@ -107,8 +113,8 @@ def build_analytic_sample(df: pd.DataFrame) -> pd.DataFrame:
     df = df[df["CLASSWKR"].isin([21, 22, 23])]
     df = df.copy()
 
-    # Access = employer has a plan (PENSION 2 or 3). Treat NIU as no access to
-    # reproduce the original results used in the write-up outputs.
+    # Access = employer has a plan (PENSION 2 or 3).
+    # NIU values are treated as no access/participation to match the existing outputs.
     df["access"] = np.where(df["PENSION"].isin([2, 3]), 1.0, 0.0)
     # Unconditional participation = included in a plan (PENSION 3).
     df["participation_unconditional"] = np.where(df["PENSION"] == 3, 1.0, 0.0)
@@ -126,6 +132,7 @@ def weighted_se_binary(p: float, w: pd.Series) -> float:
     """Approximate standard error for a weighted binary proportion.
 
     Uses population weights: sqrt(p * (1 - p) / sum(w)).
+    This is a simple approximation and not a design-based CPS standard error.
     """
     return float(np.sqrt(p * (1.0 - p) / w.sum()))
 
