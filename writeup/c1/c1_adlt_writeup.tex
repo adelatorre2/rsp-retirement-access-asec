@@ -86,17 +86,90 @@ For this reason, estimates spanning the 2010--2024 period should be interpreted 
 \appendix
 
 \clearpage
-\section{Appendix Figures and Variable Definitions}
+\section{Appendix Figures}
 
+
+% MAIN FIGURE
+\subsection{Main Figure}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{/Users/alexdelatorre/Documents/Work/CAREER_RESOURCES/Resumes & Cover Letters/ACTIVE_RESUME/latex-resume/cover_letters/!SUBMITTED/Brookings RA, Retirement Security Project, Economic Studies/rsp_data_task/output/figures/retirement_access_participation_main_figure.png}
-\caption{Retirement plan access and participation among private-sector workers ages 20--64, 2010--2024.}
+\includegraphics[width=1\textwidth]{/Users/alexdelatorre/Documents/Work/CAREER_RESOURCES/Resumes & Cover Letters/ACTIVE_RESUME/latex-resume/cover_letters/!SUBMITTED/Brookings RA, Retirement Security Project, Economic Studies/rsp_data_task/output/figures/retirement_access_participation_main_figure.png}
+\caption{Retirement plan access and participation rates among private-sector wage-and-salary workers ages 20--64, 2010--2024.}
 \label{fig:appendix-main-figure}
 \end{figure}
 
-\noindent Standard errors and confidence intervals were computed in the analysis workflow but are not displayed in the main figure for visual clarity since they were so small to the extent of being invisible.
+\noindent This figure plots two weighted annual series for private-sector wage-and-salary workers ages 20--64 who are currently employed. For each year, the access rate is calculated as the weighted share of workers whose employer offers a retirement plan, using \texttt{UH\_PENPLAN\_A1}. The participation rate shown here is the unconditional participation rate: the weighted share of workers in the analytic sample who are included in a retirement plan, using \texttt{PENSION}. In both cases, the annual rate is computed with the CPS ASEC person weight (\texttt{ASECWT}), so each point represents a population-level estimate for that survey year rather than a raw sample mean.
 
+\noindent Mechanically, the figure plots one weighted access rate and one weighted participation rate for each year from 2010 through 2024. Access is higher than participation because the two measures capture different margins: access asks whether a worker's employer offers a plan at all, while participation asks whether the worker is actually covered by a plan. A worker can therefore have no opportunity to participate because no plan is offered, or may have access but still not be enrolled. The decline after 2014 should also be interpreted cautiously. Some of that movement may reflect real changes in employer-sponsored retirement coverage, but some may reflect the 2015 CPS ASEC redesign, which changed questionnaire structure and processing methods and could have affected measured levels around that break.
+
+\noindent \textit{Source:} IPUMS CPS, Current Population Survey Annual Social and Economic Supplement (ASEC), 2010--2024, \url{https://cps.ipums.org/cps/}. \textit{Note:} Standard errors and confidence intervals were computed in the analysis workflow but are not displayed because they are visually negligible at this scale.
+
+
+
+
+% MAIN TABLE
+\clearpage
+\subsection{Yearly Annual Access Rate and Sample Size}
+
+Table~\ref{tab:access-construction} shows how the annual retirement plan access rate is constructed for the sample used in the analysis. In each year, the sample includes private-sector wage-and-salary workers ages 20--64 who are currently employed. The table reports the number of workers in that sample, the number whose employer offers a retirement plan, the number whose employer does not offer a plan, and the small number of observations for which access information is missing.
+
+
+This construction is useful because the quantity of interest is the share of workers represented in the population---not just the share of respondents in the sample---whose employer offers a retirement plan in a given year. An alternative would have been to report an unweighted access rate using only the raw sample counts, or to report a simple average of the annual access rates across years. I do not use those approaches here. Instead, each year's access rate is calculated as the ratio of two weighted population counts for that year: the estimated number of workers whose employer offers a plan divided by the estimated number of workers with nonmissing access information. The pooled row at the bottom of the table is not the simple average of the annual rates. Rather, it is constructed by summing the weighted numerators across all years, summing the weighted denominators across all years, and then taking the ratio of those two totals. It therefore represents the overall weighted access rate for the pooled 2010--2024 sample.
+
+\thispagestyle{plain}
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.05}
+\caption{Annual retirement plan access rate construction, CPS ASEC 2010--2024}
+\label{tab:access-construction}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Year & Sample workers & Offers plan & No plan & Missing & Weighted offers & Weighted sample & Access (\%) \\
+\midrule
+2010 & 62,712 & 33,374 & 27,989 & 1,349 & 48.17 & 91.17 & 52.84 \\
+2011 & 61,968 & 32,410 & 28,108 & 1,450 & 48.50 & 92.72 & 52.31 \\
+2012 & 61,862 & 32,263 & 28,087 & 1,512 & 49.25 & 95.04 & 51.82 \\
+2013 & 62,212 & 32,132 & 28,630 & 1,450 & 49.50 & 96.12 & 51.50 \\
+2014 & 61,883 & 32,602 & 27,921 & 1,360 & 102.34 & 197.14 & 51.91 \\
+2015 & 62,005 & 29,000 & 31,562 & 1,443 & 47.33 & 99.89 & 47.39 \\
+2016 & 57,764 & 24,934 & 31,618 & 1,212 & 44.60 & 102.05 & 43.70 \\
+2017 & 58,682 & 24,190 & 33,246 & 1,246 & 42.64 & 103.36 & 41.25 \\
+2018 & 56,794 & 23,655 & 31,924 & 1,215 & 44.30 & 104.91 & 42.23 \\
+2019 & 57,631 & 23,494 & 32,917 & 1,220 & 43.63 & 106.12 & 41.11 \\
+2020 & 48,615 & 20,153 & 27,640 & 822 & 42.97 & 104.72 & 41.04 \\
+2021 & 49,141 & 19,976 & 28,201 & 964 & 41.06 & 101.26 & 40.55 \\
+2022 & 47,663 & 18,627 & 27,900 & 1,136 & 40.93 & 105.40 & 38.84 \\
+2023 & 45,960 & 17,909 & 26,994 & 1,057 & 41.69 & 107.38 & 38.82 \\
+2024 & 45,950 & 17,891 & 27,082 & 977 & 42.03 & 108.11 & 38.88 \\
+\midrule
+Total / pooled & 840,842 & 382,610 & 439,819 & 18,413 & 728.95 & 1,615.38 & 45.13 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\begin{minipage}{0.92\linewidth}
+\scriptsize
+\textit{Notes:} ``Sample workers'' is the number of private-sector wage-and-salary workers ages 20--64 in the sample for that year. ``Offers plan'' is the unweighted count of workers whose employer offers a retirement plan; ``No plan'' is the unweighted count whose employer does not offer a retirement plan; and ``Missing'' is the unweighted count with missing access information. ``Weighted offers'' is the sum of CPS ASEC person weights for workers whose employer offers a plan, and ``Weighted sample'' is the sum of person weights over all workers with nonmissing access information. These weighted counts are interpreted as estimated population counts and are reported in millions. The access rate is calculated as
+\[
+\widehat{\text{Access}}_t
+=
+\frac{\sum_i w_i \, \mathbf{1}\{\text{access}_i = 1\}}
+{\sum_i w_i \, \mathbf{1}\{\text{access}_i \in \{0,1\}\}} \times 100.
+\]
+This calculation assumes that the CPS ASEC person weight can be used to scale each observed respondent up to the number of similar people they represent in the broader population, so that summing weights yields estimated population totals.
+The pooled row aggregates the weighted numerator and denominator across all years and reports the corresponding pooled access rate. \textit{Source:} IPUMS CPS, Current Population Survey Annual Social and Economic Supplement (ASEC), 2010--2024, \url{https://cps.ipums.org/cps/}.
+\end{minipage}
+\end{table}
+
+
+
+
+
+
+% VaARIABLE DEFINITIONS TABLE
+\newpage
 \begin{landscape}
 \thispagestyle{plain}
 
